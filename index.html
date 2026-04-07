@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nehir & Ben - Tic Tac Toe - Modern - Shitpost Edition</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/peerjs@1.4.7/dist/peerjs.min.js"></script>
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="glass-container">
+        <header>
+            <h1 class="title">Tic Tac Toe <span class="heart">❤</span> <span class="nehir-text">Nehir Edition</span></h1>
+            <p class="subtitle">Cişli Kediler vs Shitpostlar</p>
+        </header>
+
+        <div class="game-info">
+            <div id="status" class="status-badge">Sıra: <span id="current-player">X</span></div>
+            <div class="room-controls">
+                <button id="create-room" class="btn btn-secondary">Oda Kur</button>
+                <div class="room-input-group">
+                    <input type="text" id="join-room-input" placeholder="Oda ID Gir...">
+                    <button id="join-room" class="btn btn-primary">Katıl</button>
+                </div>
+            </div>
+            <div id="room-display" class="room-id-display hidden">
+                Oda ID: <span id="room-id">...</span>
+                <button id="copy-id" class="btn-copy">📋</button>
+            </div>
+        </div>
+
+        <div class="game-board" id="board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+
+        <div class="controls">
+            <button id="reset-btn" class="btn btn-danger">Yeniden Başlat</button>
+        </div>
+
+        <div id="feedback-overlay" class="overlay hidden">
+            <div class="feedback-content">
+                <img id="feedback-img" src="" alt="Feedback">
+                <h2 id="feedback-text">BRAVO!</h2>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
